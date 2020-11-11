@@ -1,6 +1,10 @@
-<h1>
-  <%= @article.title %>
-  <%= link_to '🖊', edit_article_path %>
-  <%= link_to '🚮', @article, method: :delete, data: { confirm: 'Are you sure you want to delete?' } %>
-</h1>
-<p><%= @article.content %></p>
+<div class="container">
+  <h1>
+    <%= @article.title %>
+    <small>
+      <%= link_to '🖊', edit_article_path %>
+      <%= link_to '🚮', @article, method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+    </small>
+  </h1>
+  <p><%= @article.content %></p>
+</div>
